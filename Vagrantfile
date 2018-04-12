@@ -7,7 +7,7 @@ config.vm.provider "virtualbox" do |v|
 end
 
 $scriptNode2 = <<-SCRIPT
-echo Ciao
+echo Ciao, script nodo 2
 date > /etc/vagrant_provisioned_at
 sudo yum -y update
 sudo wget -O /etc/yum.repos.d/jenkins.repo http://pkg.jenkins-ci.org/redhat/jenkins.repo
@@ -17,7 +17,7 @@ sudo service jenkins start
 SCRIPT
 
 $scriptNode1 = <<-SCRIPT
-echo Ciao
+echo Ciao, script nodo 1
 date > /etc/vagrant_provisioned_at
 sudo yum -y update && yum -y install ansible
 SCRIPT
